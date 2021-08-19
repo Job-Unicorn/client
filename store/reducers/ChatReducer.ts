@@ -1,9 +1,10 @@
 import { Chat } from "../contexts/ChatContext";
 import { ChatState } from "../initialState/chat";
+import { ChatActionType } from "../types/Chat";
 
 export const chatReducer = (
   state: ChatState,
-  action: { type: string; payload: Chat }
+  action: { type: ChatActionType; payload: Chat }
 ) => {
   switch (action.type) {
     case "ADD_MESSAGE":

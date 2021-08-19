@@ -1,4 +1,5 @@
 import React from "react";
+import { ChatState } from "../initialState/chat";
 
 export interface Chat {
   sender: string;
@@ -7,9 +8,7 @@ export interface Chat {
 }
 
 export interface ChatContextInterface {
-  chatState: {
-    messages: Chat[];
-  };
+  chatState: ChatState;
 }
 
 export const ChatContext = React.createContext<ChatContextInterface | null>(
