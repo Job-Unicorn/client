@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { ChatInitialState } from "../initialState/chat";
+import { ChatInitialState } from "../state/chat";
 import { chatReducer } from "../reducers/ChatReducer";
 
 export const useChatState = () => {

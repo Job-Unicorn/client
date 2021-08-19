@@ -1,5 +1,5 @@
 import { Chat } from "../contexts/ChatContext";
-import { ChatState } from "../initialState/chat";
+import { ChatState } from "../state/chat";
 import { ChatActionType } from "../types/Chat";
 
 export const chatReducer = (

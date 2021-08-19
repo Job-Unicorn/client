@@ -1,5 +1,5 @@
 import React from "react";
-import { ChatState } from "../initialState/chat";
+import { ChatState } from "../state/chat";
 
 export interface Chat {
   sender: string;
