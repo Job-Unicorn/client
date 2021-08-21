@@ -1,10 +1,12 @@
 import React from "react";
-import { AuthState } from "../state/auth";
+import { AuthInitialState, AuthState } from "../state/auth";
 
 export interface AuthContextInterface {
   authState: AuthState;
+  authDispatch: Function;
 }
 
-export const AuthContext = React.createContext<AuthContextInterface | null>(
-  null
-);
+export const AuthContext = React.createContext<AuthContextInterface>({
+  authState: AuthInitialState,
+  authDispatch: () => {},
+});

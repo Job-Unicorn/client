@@ -1,7 +1,8 @@
 import React from "react";
-import { ChatState } from "../state/chat";
+import { ChatInitialState, ChatState } from "../state/chat";
 
 export interface Chat {
+  id: string;
   sender: string;
   message: string;
   time: Date;
@@ -9,8 +10,10 @@ export interface Chat {
 
 export interface ChatContextInterface {
   chatState: ChatState;
+  chatDispatch: Function;
 }
 
-export const ChatContext = React.createContext<ChatContextInterface | null>(
-  null
-);
+export const ChatContext = React.createContext<ChatContextInterface>({
+  chatState: ChatInitialState,
+  chatDispatch: () => {},
+});
