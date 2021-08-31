@@ -14,7 +14,7 @@ export default function Home() {
     <>
 
       <Head>
-        <title>Solanazilla | Home</title>
+        <title>Job Unicorn | Home</title>
         <meta name="description" content="Earn in solana" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -9,7 +9,7 @@ const talent = () => {
         <>
 
             <Head>
-                <title>Solanazilla | Talent</title>
+                <title>Job Unicorn | Talent</title>
                 <meta name="description" content="Earn in solana" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

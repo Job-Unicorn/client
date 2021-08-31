@@ -10,7 +10,7 @@ const jobs = () => {
         <>
 
             <Head>
-                <title>Solanazilla | Jobs</title>
+                <title>Job Unicorn | Jobs</title>
                 <meta name="description" content="Earn in solana" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
