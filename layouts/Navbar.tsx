@@ -30,7 +30,7 @@ const Logo = (props) => {
         <Box {...props}>
             <Link href="/">
                 <Text fontSize="lg" cursor="pointer" fontWeight="bold" color="black" >
-                    Solanazilla
+                    Job Unicorn
                 </Text>
             </Link>
         </Box>

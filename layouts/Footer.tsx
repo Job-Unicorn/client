@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <Flex w="100%" p="4" bg=" black">
 
-            < Heading color="white" fontSize="large" > Solanazilla </Heading >
+            < Heading color="white" fontSize="large" > Job Unicorn </Heading >
 
         </Flex >
     )
