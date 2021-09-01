@@ -13,6 +13,7 @@ export const chatReducer = (
         messages: [
           ...state.messages,
           {
+            id: action.payload.id,
             sender: action.payload.sender,
             message: action.payload.message,
             time: new Date(Date.now()),
