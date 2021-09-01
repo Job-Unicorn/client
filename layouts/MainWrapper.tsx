@@ -1,20 +1,19 @@
-import Head from 'next/head'
 import React from 'react'
 import Footer from './Footer'
 import NavBar from './Navbar'
 
 const MainWrapper = (props) => {
-    return (
-        <>
+  return (
+    <>
 
-            <NavBar />
+      <NavBar />
 
-            {props.children}
+      {props.children}
 
-            <Footer />
+      <Footer />
 
-        </>
-    )
+    </>
+  )
 }
 
 export default MainWrapper
