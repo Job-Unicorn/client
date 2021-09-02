@@ -1,12 +1,10 @@
 
-import { Box, Flex } from '@chakra-ui/react'
 import Head from 'next/head'
 import Hero from '../components/landing/Hero'
 import PreFooter from '../components/landing/PreFooter'
 import SemiFlex from '../components/landing/SemiFlex'
 import Sidekick from '../components/landing/Sidekick'
 import GridWrapper from '../layouts/GridWrapper'
-import MainWrapper from '../layouts/MainWrapper'
 
 
 export default function Home() {
