@@ -1,15 +1,13 @@
+import { Flex, Heading } from '@chakra-ui/layout'
+import { Image } from '@chakra-ui/react'
 import React from 'react'
-import { login } from '../../utils/near/init'
 
 const NotAuthorized = () => {
   return (
-    <div>
-      <p>You are not authorized to access this page.</p>
-      <p>Try logging in to get access.</p>
-      <button onClick={() => {
-        login()
-      }} >Login</button>
-    </div>
+    <Flex h="87.5vh" w="100%" align="center" justify="center" flexDir="column" >
+      <Heading mb="10vh">You are not authorized to view this page</Heading>
+      <Image src="/401.gif" h="lg" alt="" />
+    </Flex>
   )
 }
 
