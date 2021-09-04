@@ -1,4 +1,4 @@
-![Logo_Black_Transparent](https://user-images.githubusercontent.com/64161383/132104117-fbe369e2-cfb7-4832-9d9d-e9c2c281b8b4.png)
+![Frame 43](https://user-images.githubusercontent.com/64161383/132104171-8e29e39f-b454-4d47-8f7d-b4809f739929.png)
 
 # Job Unicorn | Frontend
 
