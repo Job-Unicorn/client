@@ -1,3 +1,5 @@
+![Logo_Black_Transparent](https://user-images.githubusercontent.com/64161383/132104117-fbe369e2-cfb7-4832-9d9d-e9c2c281b8b4.png)
+
 # Job Unicorn | Frontend
 
 A decentralized platform for finding and hiring the best talent.
