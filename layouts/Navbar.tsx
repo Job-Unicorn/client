@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import { signIn, signOut, useSession } from "next-auth/client"
+import {  getWalletConnection, login, logout } from "../utils/near/init";
 
 const Logo = (props) => {
   return (
@@ -52,7 +52,7 @@ export const UserPopover = ({ image, name }) => {
             borderRadius="none"
             bg="blue.400"
             mt="4"
-            onClick={() => signOut()}
+            onClick={() => logout()}
           >
             <Text>Sign Out</Text>
           </Button>
@@ -122,7 +122,6 @@ const MenuItem = ({ children, link, ...rest }) => {
 };
 
 const MenuLinks = ({ isOpen }) => {
-  const [session, loading] = useSession()
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -143,30 +142,29 @@ const MenuLinks = ({ isOpen }) => {
 
 
 
-        {!session && (
-          <Button
-            size="sm"
-            rounded="md"
-            color="white"
-            bg="black"
-            shadow="md"
-            _hover={{
-              bg: ["blackAlpha.600"],
-            }}
-            onClick={() => signIn("github")}
-          >
-            <FaGithub /> <Text ml="2">Sign In</Text>
-          </Button>
-        )}
+        
+        <Button
+          size="sm"
+          rounded="md"
+          color="white"
+          bg="black"
+          shadow="md"
+          _hover={{
+            bg: ["blackAlpha.600"],
+          }}
+          onClick={() => login()}
+        >
+          <FaGithub /> <Text ml="2">Sign In</Text>
+        </Button>
+       
+        
 
-        {session && (
-          <>
-            {/* <Text>{session.user.name}</Text> */}
-            {/* <Avatar size="sm" src={session.user.image} /> */}
+        
+        <>
 
-            <UserPopover image={session.user.image} name={session.user.name} />
-          </>
-        )}
+          <UserPopover image={"https://wallpapercave.com/uwp/uwp936802.jpeg"} name={"Aarush Goyal"} />
+        </>
+     
 
 
       </Stack>

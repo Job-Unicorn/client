@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import ChatBody from '../../../../components/chat/ChatBody'
+import { withNearWallet } from '../../../../components/near/withNearWallet'
 import GridWrapper from '../../../../layouts/GridWrapper'
 
 const Company = () => {
@@ -21,4 +22,6 @@ const Company = () => {
   )
 }
 
-export default Company
+const Page = withNearWallet(Company)
+
+export default Page
