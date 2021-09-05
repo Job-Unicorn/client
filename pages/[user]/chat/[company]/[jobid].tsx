@@ -22,6 +22,6 @@ const Company = () => {
   )
 }
 
-const Page = withNearWallet(Company)
+const Page = withNearWallet(Company, "NEEDS_AUTHENTICATION")
 
 export default Page

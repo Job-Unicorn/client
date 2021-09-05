@@ -14,6 +14,7 @@ export const init = async () => {
   // Setting the wallet account ID  if it is not set. 
   window.accountId = window.jobUnicornWalletConnection.getAccountId()
 
+
 }
 
 export const getWalletConnection = () => {
@@ -28,5 +29,5 @@ export const login = () => {
 export const logout = () => {
   // Signing out.
   window.jobUnicornWalletConnection.signOut()
-  window.location.replace(window.location.origin + window.location.pathname)
+  window.location.reload()
 }
