@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Link as ChakraLink,
   Box,
@@ -18,8 +18,7 @@ import {
   PopoverTrigger
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import { signIn, signOut, useSession } from "next-auth/client"
+import { getWalletConnection, logout } from "../utils/near/init";
 
 const Logo = (props) => {
   return (
@@ -45,6 +44,7 @@ export const UserPopover = ({ image, name }) => {
         <PopoverCloseButton />
         <PopoverHeader>{name}</PopoverHeader>
         <PopoverBody >
+          <MenuItem link="/talent">Post a Job</MenuItem>
           <Button
             size="md"
             color="white"
@@ -52,7 +52,7 @@ export const UserPopover = ({ image, name }) => {
             borderRadius="none"
             bg="blue.400"
             mt="4"
-            onClick={() => signOut()}
+            onClick={() => logout()}
           >
             <Text>Sign Out</Text>
           </Button>
@@ -64,7 +64,7 @@ export const UserPopover = ({ image, name }) => {
   )
 }
 
-const NavBar = (props) => {
+const AuthenticatedNavBar = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -122,7 +122,7 @@ const MenuItem = ({ children, link, ...rest }) => {
 };
 
 const MenuLinks = ({ isOpen }) => {
-  const [session, loading] = useSession()
+
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -137,36 +137,15 @@ const MenuLinks = ({ isOpen }) => {
         color="black"
         py={[4, 4, 0, 0]}
       >
-        <MenuItem link="/talent">Hire Talent</MenuItem>
-        <MenuItem link="/jobs">Get Hired </MenuItem>
+        
+        <MenuItem link="/jobs"> Jobs </MenuItem>
+        
+        
+        <>
 
-
-
-
-        {!session && (
-          <Button
-            size="sm"
-            rounded="md"
-            color="white"
-            bg="black"
-            shadow="md"
-            _hover={{
-              bg: ["blackAlpha.600"],
-            }}
-            onClick={() => signIn("github")}
-          >
-            <FaGithub /> <Text ml="2">Sign In</Text>
-          </Button>
-        )}
-
-        {session && (
-          <>
-            {/* <Text>{session.user.name}</Text> */}
-            {/* <Avatar size="sm" src={session.user.image} /> */}
-
-            <UserPopover image={session.user.image} name={session.user.name} />
-          </>
-        )}
+          <UserPopover image={"https://wallpapercave.com/uwp/uwp936802.jpeg"} name={getWalletConnection().getAccountId()} />
+        </>
+     
 
 
       </Stack>
@@ -209,4 +188,4 @@ const NavBarContainer = ({ children, ...props }) => {
   );
 };
 
-export default NavBar;
+export default AuthenticatedNavBar;

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import Job from '../components/jobs/Job'
 import GridWrapper from '../layouts/GridWrapper'
+import { withNearWallet } from '../components/near/withNearWallet'
 
 const jobs = () => {
   return (
@@ -29,4 +30,6 @@ const jobs = () => {
   )
 }
 
-export default jobs
+const Page = withNearWallet(jobs, "DOES_NOT_NEED_AUTHENTICATION")
+
+export default Page

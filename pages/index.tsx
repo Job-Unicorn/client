@@ -4,10 +4,11 @@ import Hero from '../components/landing/Hero'
 import PreFooter from '../components/landing/PreFooter'
 import SemiFlex from '../components/landing/SemiFlex'
 import Sidekick from '../components/landing/Sidekick'
+import { withNearWallet } from '../components/near/withNearWallet'
 import GridWrapper from '../layouts/GridWrapper'
 
 
-export default function Home() {
+function Home() {
   return (
     <>
 
@@ -32,3 +33,7 @@ export default function Home() {
     </>
   )
 }
+
+const Page = withNearWallet(Home, "DOES_NOT_NEED_AUTHENTICATION")
+
+export default Page
