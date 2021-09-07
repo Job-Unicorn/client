@@ -6,7 +6,7 @@ const SemiFlex = ({ inverted }) => {
     <Flex minH="100vh" flexDir={inverted === true ? "row-reverse" : "row"} py="20%">
 
       <>
-        <Image src="https://www.turing.com/_next/image?url=%2Fimg%2Fpic-skills-mobile.png&w=1920&q=75" w="50%" />
+        <Image src="https://www.turing.com/_next/image?url=%2Fimg%2Fpic-skills-mobile.png&w=1920&q=75"  alt=""  w="50%" />
       </>
 
       <Flex h="100%" w="50%" flexDir="column" justify="center" px="8" py="15%" >

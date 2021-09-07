@@ -28,7 +28,7 @@ const Hero = () => {
 
         </Flex>
 
-        <Image src="https://cdni.iconscout.com/illustration/free/thumb/man-working-remotely-and-drinking-coffee-2814641-2343695.png" w="xl" mx="-32" />
+        <Image src="https://cdni.iconscout.com/illustration/free/thumb/man-working-remotely-and-drinking-coffee-2814641-2343695.png" alt="" w="xl" mx="-32" />
 
 
       </Flex >
