@@ -7,7 +7,7 @@ const ChatHeader = () => {
 
       <Flex mb="4">
 
-        <Image src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" objectFit="contain" w="10" />
+        <Image src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" alt="" objectFit="contain" w="10" />
 
         <Box ml="4">
           <Heading fontSize="2xl" >Facebook</Heading>
