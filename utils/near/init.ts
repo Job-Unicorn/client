@@ -8,6 +8,9 @@ export const init = async () => {
   // Initializing connection to the NEAR network.
   const near = await connect(Object.assign({ deps: { keyStore: new keyStores.BrowserLocalStorageKeyStore() } }, nearConfig));
 
+
+  window.near = near
+
   // Initializing Wallet.
   window.jobUnicornWalletConnection = new WalletConnection(near, "jobunicorn");
   
@@ -30,4 +33,9 @@ export const logout = () => {
   // Signing out.
   window.jobUnicornWalletConnection.signOut()
   window.location.reload()
+}
+
+export const getAddress =  () : string => {
+  const address = window.jobUnicornWalletConnection._authData.allKeys[0]
+  return address
 }
