@@ -15,6 +15,7 @@
 				"salary": 80000
 			}
 		],
-		"skills": ["react", "redux", "node", "express"]
+		"skills": ["react", "redux", "node", "express"],
+		"resumeLink": "https://github.com/aditya/aditya/resume.pdf"
 	}
 ]
