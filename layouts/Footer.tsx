@@ -1,5 +1,4 @@
 import { ButtonGroup, ButtonGroupProps, IconButton } from '@chakra-ui/react'
-// import { chakra, HTMLChakraProps, useColorModeValue, useToken } from '@chakra-ui/react'
 import * as React from 'react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { Box, Link, Stack, Text, TextProps } from '@chakra-ui/layout'
@@ -13,7 +12,7 @@ export const Copyright = (props: TextProps) => (
 const Logo = (props) => {
   return (
     <Box {...props}>
-      <Link href="/" passHref={true}>
+      <Link href="/">
         <Text fontSize="lg" cursor="pointer" fontWeight="bold" color="black" >
                     Job Unicorn
         </Text>
