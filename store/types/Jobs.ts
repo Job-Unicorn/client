@@ -1,0 +1,1 @@
+export type JobActionType = "SET_JOBS" | "ADD_JOB";
