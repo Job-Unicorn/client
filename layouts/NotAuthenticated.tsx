@@ -10,13 +10,12 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
 import {  login } from "../utils/near/init";
 
 const Logo = (props) => {
   return (
     <Box {...props}>
-      <Link href="/">
+      <Link href="/" passHref={true}>
         <Text fontSize="lg" cursor="pointer" fontWeight="bold" color="black" >
                     Job Unicorn
         </Text>
@@ -73,7 +72,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 const MenuItem = ({ children, link, ...rest }) => {
   return (
     <ChakraLink>
-      <Link href={link}>
+      <Link href={link} passHref={true} >
         <Text bg="white"
           color="black" display="block" {...rest}>
           {children}
@@ -103,15 +102,12 @@ const MenuLinks = ({ isOpen }) => {
         <MenuItem link="/jobs">Get Hired </MenuItem>
         
         <Button
-          size="md"
+          size="sm"
           color="white"
-          border="none"
-          borderRadius="none"
           bg="blue.400"
-          mt="4"
           onClick={() => login()}
         >
-          <FaGithub /> <Text ml="2">Sign In</Text>
+          <Text>Sign In</Text>
         </Button>
 
       </Stack>

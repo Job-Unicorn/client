@@ -15,7 +15,8 @@ const Talent = () => {
 
       <Flex>
 
-        <Image rounded="lg" src="https://media-exp1.licdn.com/dms/image/C4E03AQHZdJ_kK6G4YQ/profile-displayphoto-shrink_200_200/0/1624437156870?e=1632960000&v=beta&t=UObUAs-T_aT4l8wgAXDLUDRM3x_NwElh3AJZFX691TU" alt="" objectFit="contain" w="10" />
+        <Image rounded="lg" src="https://media-exp1.licdn.com/dms/image/C4E03AQHZdJ_kK6G4YQ/profile-displayphoto-shrink_200_200/0/1624437156870?e=1632960000&v=beta&t=UObUAs-T_aT4l8wgAXDLUDRM3x_NwElh3AJZFX691TU" alt=""  objectFit="contain" w="10" />
+
         <Box ml="4">
           <Heading fontSize="2xl" >Aditya Agarwal</Heading>
           <Text color="gray.600" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, porro!</Text>

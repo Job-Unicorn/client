@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Link as ChakraLink,
   Box,
@@ -23,7 +23,7 @@ import { getWalletConnection, logout } from "../utils/near/init";
 const Logo = (props) => {
   return (
     <Box {...props}>
-      <Link href="/">
+      <Link href="/" passHref={true}>
         <Text fontSize="lg" cursor="pointer" fontWeight="bold" color="black" >
                     Job Unicorn
         </Text>
@@ -111,7 +111,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 const MenuItem = ({ children, link, ...rest }) => {
   return (
     <ChakraLink>
-      <Link href={link}>
+      <Link href={link} passHref={true}>
         <Text bg="white"
           color="black" display="block" {...rest}>
           {children}

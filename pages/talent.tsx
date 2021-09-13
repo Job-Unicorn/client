@@ -10,7 +10,7 @@ const talent = () => {
 
       <Head>
         <title>Job Unicorn | Talent</title>
-        <meta name="description" content="Earn in solana" />
+        <meta name="description" content="Earn in NEAR" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GridWrapper columns={3}>

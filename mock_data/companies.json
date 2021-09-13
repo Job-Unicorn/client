@@ -1,0 +1,12 @@
+[
+	{
+		"id": "3423423",
+		"name": "Facebook",
+		"accountID": "facebook.near",
+		"labels": ["high growth", "social media"],
+		"description": "There is some text over here because I dont know what to write here and it has to be very long something like 5 lines worth of text and I cannot think of something so for now this will be lorem ipsum for now.",
+		"industry": "Technology",
+		"location": "San Francisco, CA",
+		"employeeStrength": { "start": 1, "end": 3 }
+	}
+]

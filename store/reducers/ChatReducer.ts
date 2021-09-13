@@ -7,21 +7,21 @@ export const chatReducer = (
   action: { type: ChatActionType; payload: Chat }
 ) => {
   switch (action.type) {
-    case "ADD_MESSAGE":
-      return {
-        ...state,
-        messages: [
-          ...state.messages,
-          {
-            id: action.payload.id,
-            sender: action.payload.sender,
-            message: action.payload.message,
-            time: new Date(Date.now()),
-          },
-        ],
-      };
+  case "ADD_MESSAGE":
+    return {
+      ...state,
+      messages: [
+        ...state.messages,
+        {
+          id: action.payload.id,
+          sender: action.payload.sender,
+          message: action.payload.message,
+          time: new Date(Date.now()),
+        },
+      ],
+    };
 
-    default:
-      return state;
+  default:
+    return state;
   }
 };
