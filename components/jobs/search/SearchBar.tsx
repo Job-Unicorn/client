@@ -5,9 +5,9 @@ import GridWrapper from '../../../layouts/GridWrapper'
 
 const SearchBar = () => {
   return (
-    <Box  p="8" borderBottomColor="gray.200" borderBottomWidth="thin">
+    <Box  py="8" borderBottomColor="gray.200" borderBottomWidth="thin">
       <GridWrapper columns={3} >
-        <Input placeholder="Search" />
+        <Input placeholder="Search" size={'lg'} />
       </GridWrapper>
     </Box>
   )
