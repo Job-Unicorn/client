@@ -1,1 +1,1 @@
-export type JobActionType = "SET_JOBS" | "ADD_JOB";
+export type JobActionType = "ADD_JOBS" | "ADD_JOB" | 'SET_FILTER';

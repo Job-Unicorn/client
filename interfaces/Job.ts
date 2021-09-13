@@ -6,8 +6,11 @@ export interface IJob {
     company: string
     companyId: string
     logo: string
+    type: string
     postedBy: string
     salary: string
+    skillsRequired: string[]
+    experienceRequired: number
     applicants: IJobApplication[]
 
 }
@@ -27,6 +30,7 @@ export interface IJobApplication {
 }
 
 export interface IJobApplicationService {
+
     id : string
     title : string
     jobType : string

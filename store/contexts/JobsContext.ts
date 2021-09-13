@@ -1,10 +1,9 @@
 import React from 'react'
-import { IJobs } from '../../interfaces/Job'
-import { IJobsAction } from '../reducers/JobsReducer'
+import { IJobsAction, IJobsState } from '../reducers/JobsReducer'
 
 
 export interface JobsContextInterface {
-    jobsState: IJobs
+    jobsState: IJobsState
     jobsDispatch: React.Dispatch<IJobsAction>
 }
 

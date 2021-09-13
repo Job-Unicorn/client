@@ -4,8 +4,9 @@ import { FaUserTie } from 'react-icons/fa'
 import { IoIosDoneAll } from 'react-icons/io'
 import { AiOutlineRise } from 'react-icons/ai'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { IJob } from '../../interfaces/Job'
 
-const Job = () => {
+const Job = ({job} : {job : IJob}) => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const finalRef = React.useRef()
@@ -15,19 +16,23 @@ const Job = () => {
 
       <Flex>
 
-        <Image src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" alt="" objectFit="contain" w="10" />
+        <Image src={job.logo} alt="" objectFit="contain" w="10" />
         <Box ml="4">
-          <Heading fontSize="2xl" >Facebook</Heading>
+          <Heading fontSize="2xl" >{job.company}</Heading>
+          {/* company description */}
           <Text color="gray.600" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, porro!</Text>
         </Box>
         <Spacer />
-        <Button onClick={onOpen} variant="ghost" _hover={{ backgroundColor: "none" }} _active={{ backgroundColor: "none" }}>
+        {/* Modal Opener Button */}
+        <Button onClick={onOpen} variant="ghost" _hover={{ backgroundColor: "none" }} _active={{ backgroundColor: "none"}}>
           <ChevronRightIcon w={6} h={6} />
         </Button>
       </Flex>
+      {/* Company Employee Strength */}
       <Flex ml="14" mt="2" color="gray.500" align="center">
         <FaUserTie /> <Text ml="2">Employee 1k-10k</Text>
       </Flex>
+      {/* Labels of company */}
       <Flex ml="14" mt="2" color="gray.500" align="center">
         <Tag size="sm" colorScheme="blue" borderRadius="full">
           <AiOutlineRise size="18px" />
@@ -38,31 +43,19 @@ const Job = () => {
           <TagLabel>Verified</TagLabel>
         </Tag>
       </Flex>
-      <Flex w="100%" mt="6" flexDir="column" p="6" borderWidth="thin" borderColor="gray.300" rounded="md" >
-        <Heading fontSize="2xl" color="gray.700"  >Lorem ipsum dolor sit amet consectetur adipisicing.</Heading>
-        <Text mt="2" noOfLines={2} color="gray.500" fontSize="sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur nulla laboriosam sequi iste veniam assumenda animi, mollitia, in vero, temporibus aliquam minima architecto doloribus voluptates repellendus necessitatibus atque eum quae? Consequatur nulla laboriosam sequi iste veniam assumenda animi, mollitia, in vero, temporibus aliquam minima architecto doloribus voluptates repellendus necessitatibus atque eum quae?</Text>
-      </Flex>
+      {/* Job Overview */}
       <Flex w="100%" mt="6" flexDir="column" p="6" borderWidth="thin" borderColor="gray.300" rounded="md" >
         <Flex align="center">
-          <Heading fontSize="lg" color="gray.700">Lorem ipsum dolor sit amet consectetur adipisicing.</Heading> <Spacer />
-          <Text color="green.500" >$ 113K - 120k</Text>
-          <Button size="sm" ml="3" rounded="md" variant="outline" bg="blue.400" color="white" borderRadius="none" >
-            Apply
-          </Button>
-
-        </Flex>
-        <Divider my="4" />
-        <Flex align="center">
-          <Heading fontSize="lg" color="gray.700">Lorem ipsum dolor sit amet consectetur adipisicing.</Heading> <Spacer />
-          <Text color="green.500" >$ 113K - 120k</Text>
-          <Button size="sm" ml="3" rounded="md" variant="outline" bg="blue.400" color="white" borderRadius="none" >
+          <Heading fontSize="lg" color="gray.700">{job.title}</Heading> <Spacer />
+          <Text color="green.500" >{job.salary} NEAR</Text>
+          <Button size="sm" ml="4" rounded="md" variant="outline" bg="blue.400" color="white" borderRadius="none" >
             Apply
           </Button>
 
         </Flex>
       </Flex>
 
-
+      {/* MODAL */}
       <Modal size="4xl" finalFocusRef={finalRef} scrollBehavior="inside" isOpen={isOpen} onClose={onClose} isCentered >
         <ModalOverlay />
         <ModalContent maxH="3xl" overflow="hidden" >
@@ -70,17 +63,21 @@ const Job = () => {
                     <ModalCloseButton /> */}
           <ModalBody p="6" >
             <Flex>
-
-              <Image src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" alt="" objectFit="contain" w="10" />
+              {/* Company logo in Modal */}
+              <Image src={job.logo} alt="" objectFit="contain" w="10" />
               <Box ml="4">
-                <Heading fontSize="2xl" >Facebook</Heading>
 
+                {/* Company Name in Modal */}
+                <Heading fontSize="2xl" >{job.company}</Heading>
+                {/* Company description in Modal */}
                 <Text color="gray.600" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, porro!</Text>
               </Box>
             </Flex>
             <Flex ml="14" mt="2" color="gray.500" align="center">
+              {/* Company employee strength in Modal */}
               <FaUserTie /> <Text ml="2">Employee 1k-10k</Text>
             </Flex>
+            {/* Company Labels in Modal */}
             <Flex ml="14" mt="2" color="gray.500" align="center">
               <Tag size="sm" colorScheme="blue" borderRadius="full">
                 <AiOutlineRise size="18px" />
@@ -95,11 +92,19 @@ const Job = () => {
 
               {/* ------------------------------------------------------------------------------------------ */}
 
-              <Box w="60%" pr="6">
-                <Heading fontSize="2xl" color="gray.700" mb="2" >Lorem ipsum dolor sit amet consectetur adipisicing.</Heading>
+              <Flex w="60%" pr="6" flexDir="column">
+                {/* Job Title in Modal */}
+                <Heading fontSize="2xl" color="gray.700" mb="2" >{job.title}</Heading>
                 <Divider />
-                <Text mt="2" color="gray.500" fontSize="sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur nulla laboriosam sequi iste veniam assumenda animi, mollitia, in vero, temporibus aliquam minima architecto doloribus voluptates repellendus necessitatibus atque eum quae? Consequatur nulla laboriosam sequi iste veniam assumenda animi, mollitia, in vero, temporibus aliquam minima architecto doloribus voluptates repellendus necessitatibus atque eum quae?</Text>
-              </Box>
+                {/* Job Description in Modal */}
+                <Text mt="2" color="gray.500" fontSize="sm">{job.description}</Text>
+
+                <Spacer />
+                    
+                <Button size="md" w="fit-content" rounded="md" variant="outline" bg="blue.400" color="white" borderRadius="none" >
+                  Apply
+                </Button>
+              </Flex>
 
 
               {/* ------------------------------------------------------------------------------------------ */}
@@ -107,37 +112,26 @@ const Job = () => {
               <Box w="40%" borderColor="gray.300" borderWidth="thin" p="3" rounded="md" >
 
                 <Box mb="3">
+                  {/* Job type in Modal */}
                   <Text fontWeight="black" >Job Type</Text>
-                  <Text>Full Time</Text>
+                  <Text>{job.type}</Text>
                 </Box>
                 <Box mb="3">
-                  <Text fontWeight="black" mb="2" >Skills</Text>
+                  <Text fontWeight="black" mb="2" >Skills Required</Text>
+                  {/* Job skills required / labels */}
                   < >
-                    <Tag size="sm" m="1" colorScheme="blue" borderRadius="full">
-                      <AiOutlineRise size="18px" />
-                      <TagLabel ml="1">High Growth</TagLabel>
-                    </Tag>
-                    <Tag size="sm" m="1" colorScheme="green" borderRadius="full">
-                      <IoIosDoneAll size="20px" />
-                      <TagLabel>Verified</TagLabel>
-                    </Tag>
-                    <Tag size="sm" m="1" colorScheme="green" borderRadius="full">
-                      <IoIosDoneAll size="20px" />
-                      <TagLabel>Verified</TagLabel>
-                    </Tag>
-                    <Tag size="sm" m="1" colorScheme="green" borderRadius="full">
-                      <IoIosDoneAll size="20px" />
-                      <TagLabel>Verified</TagLabel>
-                    </Tag>
-                    <Tag size="sm" m="1" colorScheme="green" borderRadius="full">
-                      <IoIosDoneAll size="20px" />
-                      <TagLabel>Verified</TagLabel>
-                    </Tag>
+
+                    {job.skillsRequired.map((skill, index) => (
+                      <Tag key={index}size="sm" mr="1" mb="2" px="2" py="1" colorScheme="blue" borderRadius="full">
+                        <TagLabel>{skill}</TagLabel>
+                      </Tag>
+                    ))}
+                    
                   </>
                 </Box>
                 <Box mb="3">
                   <Text fontWeight="black" >Experience</Text>
-                  <Text>2+ years</Text>
+                  <Text>{job.experienceRequired}+ years</Text>
                 </Box>
 
 
@@ -147,26 +141,7 @@ const Job = () => {
               {/* ------------------------------------------------------------------------------------------ */}
 
             </Flex>
-            <Flex w="100%" mt="6" flexDir="column" p="6" borderWidth="thin" borderColor="gray.300" rounded="md" >
-              <Flex align="center">
-
-                <Heading fontSize="lg" color="gray.700">Lorem ipsum dolor sit amet consectetur adipisicing.</Heading> <Spacer />
-                <Text color="green.500" >$ 113K - 120k</Text>
-                <Button size="sm" ml="3" rounded="md" variant="outline" bg="blue.400" color="white" borderRadius="none" >
-                  Apply
-                </Button>
-
-              </Flex>
-              <Divider my="4" />
-              <Flex align="center">
-                <Heading fontSize="lg" color="gray.700">Lorem ipsum dolor sit amet consectetur adipisicing.</Heading> <Spacer />
-                <Text color="green.500" >$ 113K - 120k</Text>
-                <Button size="sm" ml="3" rounded="md" variant="outline" bg="blue.400" color="white" borderRadius="none" >
-                  Apply
-                </Button>
-
-              </Flex>
-            </Flex>
+           
           </ModalBody>
 
           {/* <ModalFooter></ModalFooter> */}
