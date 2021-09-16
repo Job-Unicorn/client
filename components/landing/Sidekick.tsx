@@ -5,10 +5,10 @@ import Butler from './Butler'
 
 const Sidekick = () => {
   return (
-    <Box bg="blackAlpha.900" h="100vh" >
+    <Box bg="blackAlpha.900" minH="100vh" >
       < GridWrapper columns={3} >
 
-        <Flex align="center" justify="center" flexDirection="column" h="100vh" >
+        <Flex align="center" justify="center" flexDirection="column" minH="100vh" >
           <>
             <Heading as="h3" fontSize="270px" color="white" >100,000</Heading>
             <Heading as="h4" fontSize="4xl" mt="4" color="white" textAlign="center" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
@@ -57,7 +57,8 @@ const Sidekick = () => {
 
 
         </Flex>
-      </GridWrapper ></Box >
+      </GridWrapper >
+    </Box >
   )
 }
 
