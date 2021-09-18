@@ -61,7 +61,7 @@ const MenuItem = ({ children, link, ...rest }) => {
   return (
     <ChakraLink>
       <Link href={link} passHref={true} >
-        <Text bg="white"
+        <Text 
           color="black" display="block" {...rest}>
           {children}
         </Text>
@@ -82,16 +82,17 @@ const MenuLinks = ({ isOpen }) => {
         align="center"
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
-        bg="white"
+        // bg="white"
         color="black"
         py={[4, 4, 0, 0]}
       >
-        <MenuItem link="/talent">Hire Talent</MenuItem>
-        <MenuItem link="/jobs">Get Hired </MenuItem>
+        <MenuItem link="https://docs.jobunicorn.tech/">Docs</MenuItem>
+        <MenuItem link="https://jobunicorn.hashnode.dev/">Blog</MenuItem>
+        <MenuItem link="https://github.com/Job-Unicorn">Code</MenuItem>
         
         <Button
           size="sm"
-          color="white"
+          colorScheme="blue"
           bg="blue.400"
           onClick={() => {}}
         >
@@ -110,9 +111,9 @@ const NavBarContainer = ({ children, ...props }) => {
       position={["absolute", "unset"]}
       w="100%"
       zIndex="100"
-      bg="white"
+      // bg="white"
       color="black"
-      shadow="md"
+      // shadow="md"
       templateColumns={["repeat(3, 1fr)", "repeat(5, 1fr)"]}
     >
       <GridItem colSpan={[0, 1]} />
@@ -124,7 +125,7 @@ const NavBarContainer = ({ children, ...props }) => {
           wrap="wrap"
           align="center"
           justify="space-between"
-          bg="white"
+          // bg="white"
           color="black"
           minH={["7vh", "7vh"]}
 

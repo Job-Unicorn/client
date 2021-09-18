@@ -8,11 +8,11 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-export default function Sj() {
+export default function PreFooter() {
   return (
     <Flex
       // bg={useColorModeValue("#F9FAFB", "gray.600")}
-      p={50}
+      // p={50}
       w="full"
       alignItems="center"
       justifyContent="center"
@@ -41,7 +41,7 @@ export default function Sj() {
               display="block"
               color={useColorModeValue("brand.900", "gray.500")}
             >
-              Start your free trial today.
+              Apply to your dream job today.
             </chakra.span>
           </chakra.span>
           <Stack
@@ -61,11 +61,9 @@ export default function Sj() {
                 border="solid transparent"
                 fontWeight="bold"
                 rounded="md"
-                color={useColorModeValue("white","white")}
-                bg={useColorModeValue("brand.600", "brand.500")}
-                _hover={{
-                  bg: useColorModeValue("brand.700", "brand.600"),
-                }}
+                colorScheme={useColorModeValue("blue","blue")}
+                color="white"
+                bg="blue.400"
               >
                 Get started
               </Link>
@@ -81,7 +79,7 @@ export default function Sj() {
                 border="solid transparent"
                 fontWeight="bold"
                 rounded="md"
-                color="brand.600"
+                color="blue.400"
                 bg="white"
                 _hover={{
                   bg: "brand.50",

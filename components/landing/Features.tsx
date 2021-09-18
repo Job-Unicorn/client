@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useColorModeValue, chakra } from "@chakra-ui/react";
 import React from "react";
 import { Box, SimpleGrid } from "@chakra-ui/layout";
 import { Button} from "@chakra-ui/react"
+import { Image } from "@chakra-ui/image";
 
 function Features() {
   return (
@@ -25,7 +27,8 @@ function Features() {
             lineHeight={{ md: "shorter" }}
             // textShadow="2px 0 currentcolor"
           >
-              Clear overview for efficient tracking
+              World's first Blockchain-based Job Platform 
+
           </chakra.h2>
           <chakra.p
             mb={5}
@@ -33,9 +36,10 @@ function Features() {
             color={useColorModeValue("gray.600", "gray.400")}
             fontSize={{ md: "lg" }}
           >
-              Handle your subscriptions and transactions efficiently with the
-              clear overview in Dashboard. Features like the smart search option
-              allow you to quickly find any data you’re looking for.
+              Job Unicorn is the world's first and only job marketplace
+              based on the NEAR-chain. This helps you establish trustful
+              employer-employee relationships and also makes contract 
+              payments easier.
           </chakra.p>
           <Button
             w={{ base: "full", sm: "auto" }}
@@ -49,12 +53,15 @@ function Features() {
               Learn More
           </Button>
         </Box>
-        <Box
+        <Image
+          src="https://images.unsplash.com/photo-1630958234938-4f6a4a9dbf3a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80"
+          alt="something 1"
+          objectFit="contain"
           w="full"
           h="full"
-          py={48}
-          bg={useColorModeValue("gray.200", "gray.700")}
-        ></Box>
+          rounded="md"
+          // py={48}
+        />
       </SimpleGrid>
       <SimpleGrid
         alignItems="center"
@@ -75,7 +82,7 @@ function Features() {
             color={useColorModeValue("gray.900", "gray.400")}
             lineHeight={{ md: "shorter" }}
           >
-              Decide how you integrate Payments
+            Large Pool of Specialized Talent
           </chakra.h2>
           <chakra.p
             mb={5}
@@ -83,9 +90,10 @@ function Features() {
             color={useColorModeValue("gray.600", "gray.400")}
             fontSize={{ md: "lg" }}
           >
-              Love to code? Next to our ready-made and free plugins you can use
-              our expansive yet simple API; decide how you integrate Payments
-              and build advanced and reliable products yourself from scratch.
+              We can help you find the best people for your
+              organisation across a wide spectrum of fields
+              so that you wouldn't have to go anywhere else
+              at all. Your search ends at Job Unicorn.
           </chakra.p>
           <Button
             w={{ base: "full", sm: "auto" }}
@@ -99,12 +107,17 @@ function Features() {
               Learn More
           </Button>
         </Box>
-        <Box
+        {/* <Box
+          
+        ></Box> */}
+        <Image 
+          src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+          objectFit="contain"
+          alt="something"
           w="full"
           h="full"
-          py={48}
-          bg={useColorModeValue("gray.200", "gray.700")}
-        ></Box>
+          rounded="md"
+        />
       </SimpleGrid>
     </>
   );
