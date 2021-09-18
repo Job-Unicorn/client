@@ -138,7 +138,7 @@ const NavBarContainer = ({ children, ...props }) => {
           justify="space-between"
           bg="white"
           color="black"
-          h={["7vh", "7vh"]}
+          minH={["7vh", "7vh"]}
 
           {...props}
         >
