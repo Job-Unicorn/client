@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Head from 'next/head'
 import React, { useEffect } from 'react'
 import GridWrapper from '../layouts/GridWrapper'
 import { withNearWallet } from '../components/near/withNearWallet'
@@ -11,6 +10,7 @@ import useInView from 'react-cool-inview'
 import { Box } from '@chakra-ui/layout'
 import { Input } from '@chakra-ui/input'
 import JobsProvider from '../store/providers/JobsProvider'
+import SEO from '../components/general/SEO'
 const Job = dynamic(() => import('../components/jobs/Job'))
 const NoResultsFound = dynamic(() => import('../components/jobs/NoResultsFound'))
 
@@ -52,11 +52,8 @@ const JobsPage = () => {
   return (
     
     <JobsProvider>
-      <Head>
-        <title>Job Unicorn | Jobs</title>
-        <meta name="description" content="Earn in NEAR" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      
+      <SEO title={"Find the best jobs."} />
 
       <Box  py="8" borderBottomColor="gray.200" borderBottomWidth="thin">
         <GridWrapper columns={3} >

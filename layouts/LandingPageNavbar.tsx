@@ -6,56 +6,25 @@ import {
   Text,
   Button,
   Stack,
-  Avatar,
   Grid,
   GridItem,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTrigger
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { getWalletConnection, logout } from "../utils/near/init";
-import { Logo } from "../components/general/Logo";
+import {Logo} from "../components/general/Logo"
+// const Logo = (props) => {
+//   return (
+//     <Box {...props}>
+//       <Link href="/" passHref={true}>
+//         <Text fontSize="lg" cursor="pointer" fontWeight="bold" color="black" >
+//                     Job Unicorn
+//         </Text>
+//       </Link>
+//     </Box>
+//   );
+// };
 
-export const UserPopover = ({ name }) => {
-  return (
 
-    <Popover >
-      <PopoverTrigger>
-        <Avatar size="sm" src={`https://avatars.dicebear.com/api/big-ears-neutral/${name}.svg`} >
-          
-        </Avatar>
-      </PopoverTrigger>
-      <PopoverContent w="2xs" minH="2xs" shadow="md" p="2">
-        <PopoverArrow />
-        <PopoverCloseButton />
-        <PopoverHeader>{name}</PopoverHeader>
-        <PopoverBody >
-          <MenuItem link="/talent">Post a Job</MenuItem>
-          <Button
-            size="md"
-            color="white"
-            border="none"
-            borderRadius="none"
-            bg="blue.400"
-            mt="4"
-            onClick={() => logout()}
-          >
-            <Text>Sign Out</Text>
-          </Button>
-
-        </PopoverBody>
-      </PopoverContent>
-    </Popover>
-
-  )
-}
-
-const AuthenticatedNavBar = (props) => {
+const LandingNavBar = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -102,7 +71,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 const MenuItem = ({ children, link, ...rest }) => {
   return (
     <ChakraLink>
-      <Link href={link} passHref={true}>
+      <Link href={link} passHref={true} >
         <Text bg="white"
           color="black" display="block" {...rest}>
           {children}
@@ -128,16 +97,17 @@ const MenuLinks = ({ isOpen }) => {
         color="black"
         py={[4, 4, 0, 0]}
       >
+        <MenuItem link="/talent">Hire Talent</MenuItem>
+        <MenuItem link="/jobs">Get Hired </MenuItem>
         
-        <MenuItem link="/jobs"> Jobs </MenuItem>
-        
-        
-        <>
-
-          <UserPopover name={getWalletConnection().getAccountId()} />
-        </>
-     
-
+        <Button
+          size="sm"
+          color="white"
+          bg="blue.400"
+          onClick={() => {}}
+        >
+          <Text>Launch App</Text>
+        </Button>
 
       </Stack>
     </Box>
@@ -179,4 +149,4 @@ const NavBarContainer = ({ children, ...props }) => {
   );
 };
 
-export default AuthenticatedNavBar;
+export default LandingNavBar;
