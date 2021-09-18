@@ -6,6 +6,8 @@ A decentralized platform for finding and hiring the best talent.
 
 To take a look at the deployed application visit [jobunicorn.tech](https://jobunicorn.tech/).
 
+> Due to issues in [Ceramic Utils for NEAR integration](https://discord.com/channels/682786569857662976/738490013532029018/888020384765595648) we were not able to link the db (Ceramic Network) with the app that's why mock data has been used for now.
+
 ## Contributors
 
 <div>
