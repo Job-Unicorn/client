@@ -1,3 +1,3 @@
-import { IJobs } from "../../interfaces/Job";
+import { IJobsState } from "../reducers/JobsReducer";
 
-export const JobsInitialState : IJobs = []
+export const JobsInitialState : IJobsState = { jobs : [], filter : '' };

@@ -1,13 +1,21 @@
 [
 	{
 		"id": "89453298",
-		"company": "Facebook",
+		"company": "Jane Street",
 		"companyId": "234234",
-		"logo": "https://www.facebook.com/images/fb_icon_325x325.png",
-		"postedBy": "facebook.near",
+		"logo": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1490162034/isj6uhveo26gw837zr0m.png",
+		"postedBy": "janestreet.near",
 		"title": "Investment Analyst",
+		"type": "Full Time",
 		"description": "There is some text over here because I dont know what to write here and it has to be very long something like 5 lines worth of text and I cannot think of something so for now this will be lorem ipsum for now.",
 		"salary": 10000,
+		"skillsRequired": [
+			"Applied Maths",
+			"Statistics",
+			"Risk Management",
+			"Financial Management"
+		],
+		"experienceRequired": 3,
 		"applicants": [
 			{
 				"id": "980435908",
@@ -34,16 +42,19 @@
 		"id": "894532948",
 		"company": "Facebook",
 		"companyId": "234234",
+		"type": "Full Time",
 		"logo": "https://www.facebook.com/images/fb_icon_325x325.png",
 		"postedBy": "facebook.near",
-		"title": "Investment Analyst",
+		"title": "Banker",
 		"description": "There is some text over here because I dont know what to write here and it has to be very long something like 5 lines worth of text and I cannot think of something so for now this will be lorem ipsum for now.",
 		"salary": 10000,
+		"skillsRequired": ["Applied Maths", "Statistics", "Risk Management"],
+		"experienceRequired": 3,
 		"applicants": [
 			{
 				"id": "9480435908",
 				"accountId": "aditya.near",
-				"name": "Aditya Agarwal",
+				"name": "Baman Agarwal",
 				"description": "There is some text over here because I dont know what to write here and it has to be very long something like 5 lines worth of text and I cannot think of something so for now this will be lorem ipsum for now.",
 				"industry": "Investment Banking",
 				"experience": 3,
