@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import React from 'react'
+import SEO from '../components/general/SEO'
 import { withNearWallet } from '../components/near/withNearWallet'
 import Talent from '../components/talent/Talent'
 import GridWrapper from '../layouts/GridWrapper'
@@ -8,11 +8,8 @@ const talent = () => {
   return (
     <>
 
-      <Head>
-        <title>Job Unicorn | Talent</title>
-        <meta name="description" content="Earn in NEAR" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO title="Find the best talent" />
+
       <GridWrapper columns={3}>
 
         <Talent />
