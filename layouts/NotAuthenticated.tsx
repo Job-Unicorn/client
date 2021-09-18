@@ -11,18 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import {  login } from "../utils/near/init";
-
-const Logo = (props) => {
-  return (
-    <Box {...props}>
-      <Link href="/" passHref={true}>
-        <Text fontSize="lg" cursor="pointer" fontWeight="bold" color="black" >
-                    Job Unicorn
-        </Text>
-      </Link>
-    </Box>
-  );
-};
+import { Logo } from "../components/general/Logo";
 
 
 const NotAuthenticatedNavBar = (props) => {
