@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import {Logo} from "../components/general/Logo"
+import { useRouter } from 'next/router'
 
 
 const LandingNavBar = (props) => {
@@ -71,7 +72,7 @@ const MenuItem = ({ children, link, ...rest }) => {
 };
 
 const MenuLinks = ({ isOpen }) => {
-
+  const router = useRouter();
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -94,7 +95,10 @@ const MenuLinks = ({ isOpen }) => {
           size="sm"
           colorScheme="blue"
           bg="blue.400"
-          onClick={() => {}}
+          onClick={(e) => {
+            e.preventDefault();
+            router.push("/jobs");
+          }}
         >
           <Text>Launch App</Text>
         </Button>

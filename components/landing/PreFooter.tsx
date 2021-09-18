@@ -6,9 +6,15 @@ import {
   Flex,
   useColorModeValue,
   Link,
+  Button
 } from "@chakra-ui/react";
+import { useRouter } from 'next/router'
+
 
 export default function PreFooter() {
+
+  const router = useRouter()
+
   return (
     <Flex
       // bg={useColorModeValue("#F9FAFB", "gray.600")}
@@ -51,8 +57,9 @@ export default function PreFooter() {
             mt={10}
           >
             <Box display="inline-flex" rounded="md" shadow="md">
-              <Link
+              <Button
                 w="full"
+                h="full"
                 display="inline-flex"
                 alignItems="center"
                 justifyContent="center"
@@ -64,9 +71,13 @@ export default function PreFooter() {
                 colorScheme={useColorModeValue("blue","blue")}
                 color="white"
                 bg="blue.400"
+                onClick={(e) => {
+                  e.preventDefault()
+                  router.push("/jobs")
+                }}
               >
                 Get started
-              </Link>
+              </Button>
             </Box>
             <Box  display="inline-flex" rounded="md" shadow="md" >
               <Link
@@ -81,8 +92,9 @@ export default function PreFooter() {
                 rounded="md"
                 color="blue.400"
                 bg="white"
-                _hover={{
-                  bg: "brand.50",
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push("https://docs.jobunicorn.tech");
                 }}
               >
                 Learn more

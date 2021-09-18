@@ -3,8 +3,12 @@ import { Image } from "@chakra-ui/image";
 import { Box, Stack, Text } from "@chakra-ui/layout";
 import { chakra } from "@chakra-ui/system";
 import {useColorModeValue, Button} from "@chakra-ui/react"
+import { useRouter } from 'next/router'
 
 function Hero(){
+
+  const router = useRouter()
+
   return (
     <Box px={8} py={24} mx="auto">
       <Box
@@ -62,6 +66,10 @@ function Hero(){
             mb={{ base: 2, sm: 0 }}
             size="lg"
             cursor="pointer"
+            onClick={(e) => {
+              router.push("/jobs")
+            }}
+
           >
             Get Started
           </Button>

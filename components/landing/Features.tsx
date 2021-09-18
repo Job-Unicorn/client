@@ -4,8 +4,12 @@ import React from "react";
 import { Box, SimpleGrid } from "@chakra-ui/layout";
 import { Button} from "@chakra-ui/react"
 import { Image } from "@chakra-ui/image";
+import { useRouter } from "next/router";
 
 function Features() {
+  
+  const router  = useRouter();
+
   return (
     <>
       <SimpleGrid
@@ -48,6 +52,10 @@ function Features() {
             _hover={{ bg: useColorModeValue("gray.700", "gray.600") }}
             color={useColorModeValue("gray.100", "gray.200")}
             as="a"
+            onClick={(e) => {
+              e.preventDefault();
+              router.push("https://docs.jobunicorn.tech");
+            }}
               
           >
               Learn More
@@ -102,7 +110,10 @@ function Features() {
             _hover={{ bg: useColorModeValue("gray.700", "gray.600") }}
             color={useColorModeValue("gray.100", "gray.200")}
             as="a"
-              
+            onClick={(e) => {
+              e.preventDefault();
+              router.push("https://docs.jobunicorn.tech");
+            }}
           >
               Learn More
           </Button>
