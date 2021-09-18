@@ -32,12 +32,14 @@ const Logo = (props) => {
   );
 };
 
-export const UserPopover = ({ image, name }) => {
+export const UserPopover = ({ name }) => {
   return (
 
     <Popover >
       <PopoverTrigger>
-        <Avatar size="sm" src={image} />
+        <Avatar size="sm" src={`https://avatars.dicebear.com/api/big-ears-neutral/${name}.svg`} >
+          
+        </Avatar>
       </PopoverTrigger>
       <PopoverContent w="2xs" minH="2xs" shadow="md" p="2">
         <PopoverArrow />
@@ -143,7 +145,7 @@ const MenuLinks = ({ isOpen }) => {
         
         <>
 
-          <UserPopover image={"https://wallpapercave.com/uwp/uwp936802.jpeg"} name={getWalletConnection().getAccountId()} />
+          <UserPopover name={getWalletConnection().getAccountId()} />
         </>
      
 
@@ -176,7 +178,7 @@ const NavBarContainer = ({ children, ...props }) => {
           justify="space-between"
           bg="white"
           color="black"
-          h={["7vh", "7vh"]}
+          minH={["7vh", "7vh"]}
 
           {...props}
         >

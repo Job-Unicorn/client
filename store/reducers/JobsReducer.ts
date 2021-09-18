@@ -10,14 +10,23 @@ export interface IJobsAction {
 export interface JobActionPayload {
     job? : IJob;
     jobs? : IJobs;
+    filter? : string;
 }
 
-export const JobsReducer = ( state : IJobs, action : IJobsAction ) : IJobs => {
+export interface IJobsState {
+  jobs: IJobs;
+  filter: string;
+}
+
+export const JobsReducer = ( state : IJobsState, action : IJobsAction ) : IJobsState => {
   switch (action.type) {
-  case 'SET_JOBS':
-    return [...state, ...action.payload.jobs];
+  case 'ADD_JOBS':
+    return {...state, jobs : [...state.jobs, ...action.payload.jobs]};
   case 'ADD_JOB':
-    return [...state, action.payload.job];
+    return {...state, jobs : [...state.jobs, action.payload.job]};
+  case 'SET_FILTER':
+    return {...state, filter : action.payload.filter};
+
   default:
     return state;
   }
