@@ -91,7 +91,7 @@ function Hero(){
           w="full"
           rounded="lg"
           shadow="2xl"
-          src="https://kutty.netlify.app/hero.jpg"
+          src="/preview.png"
           alt="Hellonext feedback boards software screenshot"
         />
       </Box>
