@@ -1,10 +1,11 @@
 import React, { ComponentType, useEffect, useState } from "react";
 import AuthenticatedWrapper from "../../layouts/AuthenticatedWrapper";
+import LandingPageWrapper from "../../layouts/LandingPageWrapper";
 import NotAuthenticatedWrapper from "../../layouts/NotAuthenticatedWrapper";
 import { init , getWalletConnection} from "../../utils/near/init";
 import NotAuthorized from "./NotAuthorized";
 
-type INeedsAuthentication = "NEEDS_AUTHENTICATION" | "DOES_NOT_NEED_AUTHENTICATION"
+type INeedsAuthentication = "NEEDS_AUTHENTICATION" | "DOES_NOT_NEED_AUTHENTICATION" | "LANDING_PAGE"
 
 export function withNearWallet<P>(Inner : ComponentType<P>, needsAuthentication : INeedsAuthentication) {
 
@@ -16,8 +17,14 @@ export function withNearWallet<P>(Inner : ComponentType<P>, needsAuthentication 
         setSignedIn(getWalletConnection().isSignedIn())
       })
     }, []);
+    if (needsAuthentication === "LANDING_PAGE"){
+      return (
+        <LandingPageWrapper>
+          <Inner {...props} />
+        </LandingPageWrapper>
+      )
 
-    if (signedIn) {
+    } else if (signedIn) {
       return (
         <AuthenticatedWrapper >
           <Inner {...props}/>

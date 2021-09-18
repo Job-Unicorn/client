@@ -6,56 +6,15 @@ import {
   Text,
   Button,
   Stack,
-  Avatar,
   Grid,
   GridItem,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTrigger
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { getWalletConnection, logout } from "../utils/near/init";
-import { Logo } from "../components/general/Logo";
+import {Logo} from "../components/general/Logo"
+import { useRouter } from 'next/router'
 
-export const UserPopover = ({ name }) => {
-  return (
 
-    <Popover >
-      <PopoverTrigger>
-        <Avatar size="sm" src={`https://avatars.dicebear.com/api/big-ears-neutral/${name}.svg`} >
-          
-        </Avatar>
-      </PopoverTrigger>
-      <PopoverContent w="2xs" minH="2xs" shadow="md" p="2">
-        <PopoverArrow />
-        <PopoverCloseButton />
-        <PopoverHeader>{name}</PopoverHeader>
-        <PopoverBody >
-          <MenuItem link="/talent">Post a Job</MenuItem>
-          <Button
-            size="md"
-            color="white"
-            border="none"
-            borderRadius="none"
-            bg="blue.400"
-            mt="4"
-            onClick={() => logout()}
-          >
-            <Text>Sign Out</Text>
-          </Button>
-
-        </PopoverBody>
-      </PopoverContent>
-    </Popover>
-
-  )
-}
-
-const AuthenticatedNavBar = (props) => {
+const LandingNavBar = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -102,8 +61,8 @@ const MenuToggle = ({ toggle, isOpen }) => {
 const MenuItem = ({ children, link, ...rest }) => {
   return (
     <ChakraLink>
-      <Link href={link} passHref={true}>
-        <Text bg="white"
+      <Link href={link} passHref={true} >
+        <Text 
           color="black" display="block" {...rest}>
           {children}
         </Text>
@@ -113,7 +72,7 @@ const MenuItem = ({ children, link, ...rest }) => {
 };
 
 const MenuLinks = ({ isOpen }) => {
-
+  const router = useRouter();
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -124,20 +83,25 @@ const MenuLinks = ({ isOpen }) => {
         align="center"
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
-        bg="white"
+        // bg="white"
         color="black"
         py={[4, 4, 0, 0]}
       >
+        <MenuItem link="https://docs.jobunicorn.tech/">Docs</MenuItem>
+        <MenuItem link="https://jobunicorn.hashnode.dev/">Blog</MenuItem>
+        <MenuItem link="https://github.com/Job-Unicorn">Code</MenuItem>
         
-        <MenuItem link="/jobs"> Jobs </MenuItem>
-        
-        
-        <>
-
-          <UserPopover name={getWalletConnection().getAccountId()} />
-        </>
-     
-
+        <Button
+          size="sm"
+          colorScheme="blue"
+          bg="blue.400"
+          onClick={(e) => {
+            e.preventDefault();
+            router.push("/jobs");
+          }}
+        >
+          <Text>Launch App</Text>
+        </Button>
 
       </Stack>
     </Box>
@@ -151,9 +115,9 @@ const NavBarContainer = ({ children, ...props }) => {
       position={["absolute", "unset"]}
       w="100%"
       zIndex="100"
-      bg="white"
+      // bg="white"
       color="black"
-      shadow="md"
+      // shadow="md"
       templateColumns={["repeat(3, 1fr)", "repeat(5, 1fr)"]}
     >
       <GridItem colSpan={[0, 1]} />
@@ -165,7 +129,7 @@ const NavBarContainer = ({ children, ...props }) => {
           wrap="wrap"
           align="center"
           justify="space-between"
-          bg="white"
+          // bg="white"
           color="black"
           minH={["7vh", "7vh"]}
 
@@ -179,4 +143,4 @@ const NavBarContainer = ({ children, ...props }) => {
   );
 };
 
-export default AuthenticatedNavBar;
+export default LandingNavBar;

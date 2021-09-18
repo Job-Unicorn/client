@@ -1,39 +1,110 @@
-import { Button, Flex, Heading, Image } from '@chakra-ui/react'
-import React from 'react'
-import GridWrapper from '../../layouts/GridWrapper'
+/* eslint-disable react/no-unescaped-entities */
+import { Image } from "@chakra-ui/image";
+import { Box, Stack, Text } from "@chakra-ui/layout";
+import { chakra } from "@chakra-ui/system";
+import {useColorModeValue, Button} from "@chakra-ui/react"
+import { useRouter } from 'next/router'
 
-const Hero = () => {
+function Hero(){
+
+  const router = useRouter()
+
   return (
+    <Box px={8} py={24} mx="auto">
+      <Box
+        w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
+        mx="auto"
+        textAlign={{ base: "left", md: "center" }}
+      >
+        <chakra.h1
+          mb={10}
+          fontSize={{ base: "4xl", md: "6xl" }}
+          fontWeight="bold"
+          lineHeight="none"
+          letterSpacing={{ base: "normal", md: "tight" }}
+          color={useColorModeValue("gray.900",'gray.100')}
+        >
+          Making {" "}
+          <Text
+            display={{ base: "block", lg: "inline" }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, blue.500 , blue.400)"
+            fontWeight="extrabold"
+          >
+            Hiring Easier
+          </Text>{" "}
+           a little.
+        </chakra.h1>
+        <chakra.p
+          px={{ base: 0, lg: 24 }}
+          mb={8}
+          fontSize={{ base: "lg", md: "xl" }}
+          color={useColorModeValue("gray.600",'gray.300')}
+        >
+          Hiring is not easy, but with the right skillset it can be done.
+          Our partner companies are in desperate need of your skills and 
+          we've found the companies who can give you what you want. Don't
+           search the web for jobs - we've made it easier than ever.
 
-    <GridWrapper columns={3}>
-      <Flex alignItems="center" justifyContent="space-around" minH="93vh">
+        </chakra.p>
+        <Stack
+          direction={{base:"column",sm:"row"}}
+          mb={{ base: 4, md: 8 }}
+          spacing={10}
+          justifyContent={{ sm: "left", md: "center" }}
+        >
+          <Button
+            as="a"
+            variant="solid"
+            colorScheme="blue"
+            bg="blue.400"
+            display="inline-flex"
+            alignItems="center"
+            justifyContent="center"
+            w={{ base: "full", sm: "auto" }}
+            mb={{ base: 2, sm: 0 }}
+            size="lg"
+            cursor="pointer"
+            onClick={(e) => {
+              router.push("/jobs")
+            }}
 
-        <Flex flexDir="column">
+          >
+            Get Started
+          </Button>
+          <Button
+            as="a"
+            bg="white"
+            color="brand.900"
+            display="inline-flex"
+            alignItems="center"
+            justifyContent="center"
+            w={{ base: "full", sm: "auto" }}
+            mb={{ base: 2, sm: 0 }}
+            size="lg"
+            cursor="pointer"
+          >
+            Watch Demo
+          </Button>
+        </Stack>
+      </Box>
+      <Box
+        w={{ base: "full", md: 10 / 12 }}
+        mx="auto"
+        mt={20}
+        textAlign="center"
+      >
+        <Image
+          w="full"
+          rounded="lg"
+          shadow="2xl"
+          src="/preview.png"
+          alt="Hellonext feedback boards software screenshot"
+        />
+      </Box>
+    </Box>
+  );
+};
 
-          <Heading as="h1" fontSize="7xl" my="10" w="xl">
-            You’ve come to the right place
-          </Heading>
-
-          <Heading as="h2" fontSize="2xl" fontWeight="normal" w="xl" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor debitis sint mollitia eos dolorum error rem iusto numquam vitae cupiditate!
-          </Heading>
-
-          <Flex mt="20" align="center">
-            <Button size="lg" variant="outline" bg="blue.400" color="white" borderRadius="none" >
-              Hire Talent
-            </Button>
-            <Button mx="8" size="lg" bg="white" variant="outline" borderWidth="2px" borderColor="blue.400" color="blue.400" borderRadius="none"  >
-              Get Hired
-            </Button>
-          </Flex>
-
-        </Flex>
-
-        <Image src="https://cdni.iconscout.com/illustration/free/thumb/man-working-remotely-and-drinking-coffee-2814641-2343695.png" alt="" w="xl" mx="-32" />
-
-
-      </Flex >
-    </GridWrapper>
-  )
-}
-
-export default Hero
+export default Hero;

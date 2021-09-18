@@ -1,7 +1,8 @@
 import { ButtonGroup, ButtonGroupProps, IconButton } from '@chakra-ui/react'
 import * as React from 'react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
-import { Box, Link, Stack, Text, TextProps } from '@chakra-ui/layout'
+import { Box, Flex, Link, Stack, Text, TextProps } from '@chakra-ui/layout'
+import { Image } from '@chakra-ui/image'
 
 export const Copyright = (props: TextProps) => (
   <Text fontSize="sm" {...props}>
@@ -9,11 +10,12 @@ export const Copyright = (props: TextProps) => (
   </Text>
 )
 
-const Logo = (props) => {
+export const Logo = (props) => {
   return (
     <Box {...props}>
-      <Link href="/">
-        <Text fontSize="lg" cursor="pointer" fontWeight="bold" color="black" >
+      <Link as={Flex} href="/" align="center">
+        <Image alt="logo" src="/logo.svg" w="12" />
+        <Text fontSize="2xl" ml="4" cursor="pointer" fontWeight="bold" color="#000F30" >
                     Job Unicorn
         </Text>
       </Link>
