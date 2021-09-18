@@ -1,4 +1,4 @@
-![Frame 43](https://user-images.githubusercontent.com/64161383/132104171-8e29e39f-b454-4d47-8f7d-b4809f739929.png)
+![image](https://user-images.githubusercontent.com/64161383/133911003-fe4b7f2c-c454-4b13-8f5b-02abbc84310e.png)
 
 # Job Unicorn | Frontend
 
