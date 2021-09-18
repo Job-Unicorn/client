@@ -11,17 +11,6 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import {Logo} from "../components/general/Logo"
-// const Logo = (props) => {
-//   return (
-//     <Box {...props}>
-//       <Link href="/" passHref={true}>
-//         <Text fontSize="lg" cursor="pointer" fontWeight="bold" color="black" >
-//                     Job Unicorn
-//         </Text>
-//       </Link>
-//     </Box>
-//   );
-// };
 
 
 const LandingNavBar = (props) => {
