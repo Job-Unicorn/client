@@ -67,6 +67,7 @@ function Hero(){
             size="lg"
             cursor="pointer"
             onClick={(e) => {
+              e.preventDefault()
               router.push("/jobs")
             }}
 
@@ -84,6 +85,10 @@ function Hero(){
             mb={{ base: 2, sm: 0 }}
             size="lg"
             cursor="pointer"
+            onClick={(e) => {
+              e.preventDefault()
+              router.push("/demo")
+            }}
           >
             Watch Demo
           </Button>
