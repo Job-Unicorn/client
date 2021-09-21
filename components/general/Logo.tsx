@@ -1,5 +1,5 @@
-import { Image } from '@chakra-ui/image';
-import { Box, Flex, Link, Text } from '@chakra-ui/layout';
+import { Image } from '@chakra-ui/image'
+import { Box, Flex, Link, Text } from '@chakra-ui/layout'
 import React from 'react'
 
 export const Logo = (props) => {
@@ -16,5 +16,5 @@ export const Logo = (props) => {
       </Flex>
       
     </Box>
-  );
-};
+  )
+}

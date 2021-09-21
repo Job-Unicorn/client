@@ -20,8 +20,8 @@ export const Logo = (props) => {
         </Text>
       </Link>
     </Box>
-  );
-};
+  )
+}
 
 export const SocialMediaLinks = (props: ButtonGroupProps) => (
   <ButtonGroup variant="ghost" color="gray.600" {...props}>

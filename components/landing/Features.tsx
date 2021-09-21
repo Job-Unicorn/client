@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useColorModeValue, chakra } from "@chakra-ui/react";
-import React from "react";
-import { Box, SimpleGrid } from "@chakra-ui/layout";
+import { useColorModeValue, chakra } from "@chakra-ui/react"
+import React from "react"
+import { Box, SimpleGrid } from "@chakra-ui/layout"
 import { Button} from "@chakra-ui/react"
-import { Image } from "@chakra-ui/image";
-import { useRouter } from "next/router";
+import { Image } from "@chakra-ui/image"
+import { useRouter } from "next/router"
 
 function Features() {
   
-  const router  = useRouter();
+  const router  = useRouter()
 
   return (
     <>
@@ -53,8 +53,8 @@ function Features() {
             color={useColorModeValue("gray.100", "gray.200")}
             as="a"
             onClick={(e) => {
-              e.preventDefault();
-              router.push("https://docs.jobunicorn.tech");
+              e.preventDefault()
+              router.push("https://docs.jobunicorn.tech")
             }}
               
           >
@@ -111,8 +111,8 @@ function Features() {
             color={useColorModeValue("gray.100", "gray.200")}
             as="a"
             onClick={(e) => {
-              e.preventDefault();
-              router.push("https://docs.jobunicorn.tech");
+              e.preventDefault()
+              router.push("https://docs.jobunicorn.tech")
             }}
           >
               Learn More
@@ -131,6 +131,6 @@ function Features() {
         />
       </SimpleGrid>
     </>
-  );
+  )
 }
-export default Features;
+export default Features

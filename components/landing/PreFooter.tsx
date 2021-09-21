@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   chakra,
   Box,
@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   Link,
   Button
-} from "@chakra-ui/react";
+} from "@chakra-ui/react"
 import { useRouter } from 'next/router'
 
 
@@ -93,8 +93,8 @@ export default function PreFooter() {
                 color="blue.400"
                 bg="white"
                 onClick={(e) => {
-                  e.preventDefault();
-                  router.push("https://docs.jobunicorn.tech");
+                  e.preventDefault()
+                  router.push("https://docs.jobunicorn.tech")
                 }}
               >
                 Learn more
@@ -104,5 +104,5 @@ export default function PreFooter() {
         </Box>
       </Flex>
     </Flex>
-  );
+  )
 }
