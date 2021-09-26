@@ -1,7 +1,8 @@
 {
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "no-unused-vars": "warn",
-    "indent": ["error", 2]
-  }
+	"extends": "next/core-web-vitals",
+	"rules": {
+		"no-unused-vars": "warn",
+		"indent": ["error", 2],
+		"semi": ["error", "never"]
+	}
 }

@@ -1,6 +1,27 @@
 import React from 'react'
 import Head from 'next/head'
 
+/**
+ * 
+ * ### SEO
+ * 
+ * This component is used to set the
+ * SEO tags for the page.
+ * 
+ * ![SEO](https://i.imgur.com/gJPpM1w.png)
+ * 
+ * ---
+ * 
+ * #### Usage
+ * 
+ * ```js
+ * import SEO from '@components/general/SEO'
+ * 
+ * <SEO title="My Page" />
+ * ```
+ * 
+ */
+
 const SEO = ({title} : {title : string}) => {
   return (
     <Head>

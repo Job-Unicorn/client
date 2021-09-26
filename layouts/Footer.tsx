@@ -20,12 +20,12 @@ export const Logo = (props) => {
         </Text>
       </Link>
     </Box>
-  );
-};
+  )
+}
 
 export const SocialMediaLinks = (props: ButtonGroupProps) => (
   <ButtonGroup variant="ghost" color="gray.600" {...props}>
-    <IconButton as="a" href="#" aria-label="LinkedIn" icon={<FaLinkedin fontSize="20px" />} />
+    <IconButton as="a" href="https://www.linkedin.com/company/job-unicorn" aria-label="LinkedIn" icon={<FaLinkedin fontSize="20px" />} />
     <IconButton as="a" href="https://github.com/Job-Unicorn" aria-label="GitHub" icon={<FaGithub fontSize="20px" />} />
     <IconButton as="a" href="https://twitter.com/job_unicorn" aria-label="Twitter" icon={<FaTwitter fontSize="20px" />} />
   </ButtonGroup>
