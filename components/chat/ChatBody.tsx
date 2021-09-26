@@ -6,7 +6,7 @@ import ChatProvider from '../../store/providers/ChatProvider'
 import ChatHeader from './ChatHeader'
 import OtherPersonChat from './OtherPersonChat'
 import PersonalChat from './PersonalChat'
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
 
 const ChatBody = () => {
   const user = "Aarush"
@@ -16,7 +16,7 @@ const ChatBody = () => {
     handleSubmit,
     // eslint-disable-next-line no-unused-vars
     formState: { errors },
-  } = useForm();
+  } = useForm()
   // eslint-disable-next-line no-unused-vars
   const { chatState, chatDispatch } = useContext(ChatContext)
 
