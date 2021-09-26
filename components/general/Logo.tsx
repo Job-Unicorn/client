@@ -2,6 +2,16 @@ import { Image } from '@chakra-ui/image'
 import { Box, Flex, Link, Text } from '@chakra-ui/layout'
 import React from 'react'
 
+/**
+ * 
+ * # Logo
+ * 
+ * Gives a flex box with the logo 
+ * and the name of the app and the
+ * link to the home page
+ * 
+ */
+
 export const Logo = (props) => {
   return (
     <Box {...props}>
