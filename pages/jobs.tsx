@@ -22,7 +22,7 @@ const JobsPage = () => {
   const [moreJobsAvailable, setMoreJobsAvailable] = React.useState<boolean>(true)
   const { observe, inView } = useInView({
     // onEnter: ({ unobserve }) => unobserve(), // only run once
-  });
+  })
 
   // ON PAGE LOAD
   useEffect( () => {

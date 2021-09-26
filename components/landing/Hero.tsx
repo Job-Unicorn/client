@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Image } from "@chakra-ui/image";
-import { Box, Stack, Text } from "@chakra-ui/layout";
-import { chakra } from "@chakra-ui/system";
+import { Image } from "@chakra-ui/image"
+import { Box, Stack, Text } from "@chakra-ui/layout"
+import { chakra } from "@chakra-ui/system"
 import {useColorModeValue, Button} from "@chakra-ui/react"
 import { useRouter } from 'next/router'
 
@@ -109,7 +109,7 @@ function Hero(){
         />
       </Box>
     </Box>
-  );
+  )
 };
 
-export default Hero;
+export default Hero
