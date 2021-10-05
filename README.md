@@ -1,3 +1,5 @@
+> This repo is now archived you can check out our [sodium](https://github.com/Job-Unicorn/sodium) repo on which the new version of job unicorn is being built.
+
 <h1 align="center">Job Unicorn</h1>
 
 
